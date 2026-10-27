@@ -1,0 +1,7 @@
+﻿ID,Peso kg,Cliente,Envio,Esperado USD,Obtenido,Estado,Prueba
+TD-01,5.00,NUEVO,ESTANDAR,15.00,15.00,APROBADO,test_decision_table
+TD-02,5.00,NUEVO,EXPRESS,18.75,18.75,APROBADO,test_decision_table
+TD-03,5.00,FRECUENTE,ESTANDAR,13.50,13.50,APROBADO,test_decision_table
+TD-04,5.00,FRECUENTE,EXPRESS,17.25,17.25,APROBADO,test_decision_table
+TD-05,5.00,VIP,ESTANDAR,12.00,12.00,APROBADO,test_decision_table
+TD-06,5.00,VIP,EXPRESS,15.75,15.75,APROBADO,test_decision_table

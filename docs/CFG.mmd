@@ -1,0 +1,18 @@
+flowchart TD
+ A["1 Inicio"] --> B{"2 Peso menor o igual a 5"}
+ B -- Sí --> C["3 Tarifa por kg 2"]
+ B -- No --> D["4 Tarifa por kg 4"]
+ C --> E["5 Subtotal y descuento inicial 0"]
+ D --> E
+ E --> F{"6 Cliente FRECUENTE"}
+ F -- Sí --> G["7 Descuento 10 por ciento"]
+ F -- No --> H{"8 Cliente VIP"}
+ H -- Sí --> I["9 Descuento 20 por ciento"]
+ G --> J["10 Calcular descuento y recargo inicial 0"]
+ H -- No --> J
+ I --> J
+ J --> K{"11 Envío EXPRESS"}
+ K -- Sí --> L["12 Recargo 25 por ciento"]
+ K -- No --> M["13 Total y redondeo"]
+ L --> M
+ M --> N["14 Retornar resultado y fin"]

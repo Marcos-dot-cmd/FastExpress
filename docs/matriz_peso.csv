@@ -1,0 +1,21 @@
+﻿ID,Peso kg,Cliente,Envio,Esperado USD o error,Obtenido,Estado,Prueba automatizada
+CN-P01,-1,NUEVO,ESTANDAR,Error,Error,APROBADO,test_weight_boundaries / test_invalid_weights
+CN-P02,0,NUEVO,ESTANDAR,Error,Error,APROBADO,test_weight_boundaries / test_invalid_weights
+CN-P03,0.001,NUEVO,ESTANDAR,Error,Error,APROBADO,test_weight_boundaries / test_invalid_weights
+CN-P04,0.01,NUEVO,ESTANDAR,5.02,5.02,APROBADO,test_weight_boundaries / test_invalid_weights
+CN-P05,0.02,NUEVO,ESTANDAR,5.04,5.04,APROBADO,test_weight_boundaries / test_invalid_weights
+CN-P06,2.50,NUEVO,ESTANDAR,10.00,10.00,APROBADO,test_weight_boundaries / test_invalid_weights
+CN-P07,4.99,NUEVO,ESTANDAR,14.98,14.98,APROBADO,test_weight_boundaries / test_invalid_weights
+CN-P08,5.00,NUEVO,ESTANDAR,15.00,15.00,APROBADO,test_weight_boundaries / test_invalid_weights
+CN-P09,5.001,NUEVO,ESTANDAR,Error,Error,APROBADO,test_weight_boundaries / test_invalid_weights
+CN-P10,5.01,NUEVO,ESTANDAR,25.04,25.04,APROBADO,test_weight_boundaries / test_invalid_weights
+CN-P11,5.02,NUEVO,ESTANDAR,25.08,25.08,APROBADO,test_weight_boundaries / test_invalid_weights
+CN-P12,10.00,NUEVO,ESTANDAR,45.00,45.00,APROBADO,test_weight_boundaries / test_invalid_weights
+CN-P13,19.99,NUEVO,ESTANDAR,84.96,84.96,APROBADO,test_weight_boundaries / test_invalid_weights
+CN-P14,20.00,NUEVO,ESTANDAR,85.00,85.00,APROBADO,test_weight_boundaries / test_invalid_weights
+CN-P15,20.01,NUEVO,ESTANDAR,Error,Error,APROBADO,test_weight_boundaries / test_invalid_weights
+CN-P16,21,NUEVO,ESTANDAR,Error,Error,APROBADO,test_weight_boundaries / test_invalid_weights
+CN-P17,abc,NUEVO,ESTANDAR,Error,Error,APROBADO,test_weight_boundaries / test_invalid_weights
+CN-P18,,NUEVO,ESTANDAR,Error,Error,APROBADO,test_weight_boundaries / test_invalid_weights
+CN-P19,NaN,NUEVO,ESTANDAR,Error,Error,APROBADO,test_weight_boundaries / test_invalid_weights
+CN-P20,Infinity,NUEVO,ESTANDAR,Error,Error,APROBADO,test_weight_boundaries / test_invalid_weights

@@ -1,0 +1,6 @@
+﻿ID,Prueba,Esperado,Estado,Navegador,Fecha,Evaluador,Observacion
+UI01,Seis combinaciones de cliente y envio,Totales coinciden con tabla de decision,PENDIENTE,,,,
+UI02,0 y 20.01 y 5.001 y vacio,Validacion del formulario,PENDIENTE,,,,
+UI03,Ancho movil 390 px,Sin desbordamiento horizontal,PENDIENTE,,,,
+UI04,Navegacion con Tab y Enter,Foco visible y calculo accesible,PENDIENTE,,,,
+UI05,Servidor desconectado,Mensaje y boton habilitado,PENDIENTE,,,,

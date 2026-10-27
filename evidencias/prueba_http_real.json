@@ -1,0 +1,50 @@
+[
+  {
+    "cliente": "NUEVO",
+    "envio": "ESTANDAR",
+    "esperado": "15.00",
+    "obtenido": "15.00",
+    "http": 200,
+    "estado": "APROBADO"
+  },
+  {
+    "cliente": "NUEVO",
+    "envio": "EXPRESS",
+    "esperado": "18.75",
+    "obtenido": "18.75",
+    "http": 200,
+    "estado": "APROBADO"
+  },
+  {
+    "cliente": "FRECUENTE",
+    "envio": "ESTANDAR",
+    "esperado": "13.50",
+    "obtenido": "13.50",
+    "http": 200,
+    "estado": "APROBADO"
+  },
+  {
+    "cliente": "FRECUENTE",
+    "envio": "EXPRESS",
+    "esperado": "17.25",
+    "obtenido": "17.25",
+    "http": 200,
+    "estado": "APROBADO"
+  },
+  {
+    "cliente": "VIP",
+    "envio": "ESTANDAR",
+    "esperado": "12.00",
+    "obtenido": "12.00",
+    "http": 200,
+    "estado": "APROBADO"
+  },
+  {
+    "cliente": "VIP",
+    "envio": "EXPRESS",
+    "esperado": "15.75",
+    "obtenido": "15.75",
+    "http": 200,
+    "estado": "APROBADO"
+  }
+]

@@ -1,0 +1,90 @@
+127.0.0.1 - - [27/Oct/2026 04:48:40] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [27/Oct/2026 04:48:40] "GET /assets/styles.css HTTP/1.1" 200 -
+127.0.0.1 - - [27/Oct/2026 04:48:40] "GET /assets/app.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Oct/2026 04:48:41] "POST /api/cotizaciones HTTP/1.1" 200 -
+127.0.0.1 - - [27/Oct/2026 04:48:41] "POST /api/cotizaciones HTTP/1.1" 200 -
+127.0.0.1 - - [27/Oct/2026 04:48:41] "POST /api/cotizaciones HTTP/1.1" 200 -
+127.0.0.1 - - [27/Oct/2026 04:48:41] "POST /api/cotizaciones HTTP/1.1" 200 -
+127.0.0.1 - - [27/Oct/2026 04:48:41] "POST /api/cotizaciones HTTP/1.1" 200 -
+127.0.0.1 - - [27/Oct/2026 04:48:41] "POST /api/cotizaciones HTTP/1.1" 200 -
+127.0.0.1 - - [27/Oct/2026 04:48:42] "POST /api/cotizaciones HTTP/1.1" 200 -
+127.0.0.1 - - [27/Oct/2026 04:48:42] "POST /api/cotizaciones HTTP/1.1" 200 -
+127.0.0.1 - - [27/Oct/2026 04:48:42] "POST /api/cotizaciones HTTP/1.1" 200 -
+127.0.0.1 - - [27/Oct/2026 04:48:42] "POST /api/cotizaciones HTTP/1.1" 200 -
+127.0.0.1 - - [27/Oct/2026 04:48:42] "POST /api/cotizaciones HTTP/1.1" 200 -
+127.0.0.1 - - [27/Oct/2026 04:48:42] "POST /api/cotizaciones HTTP/1.1" 200 -
+127.0.0.1 - - [27/Oct/2026 04:48:42] "POST /api/cotizaciones HTTP/1.1" 200 -
+[
+  {
+    "caso": "UI-NUEVO-ESTANDAR",
+    "esperado": "15.00",
+    "obtenido": "USD 15,00",
+    "estado": "APROBADO"
+  },
+  {
+    "caso": "UI-NUEVO-EXPRESS",
+    "esperado": "18.75",
+    "obtenido": "USD 18,75",
+    "estado": "APROBADO"
+  },
+  {
+    "caso": "UI-FRECUENTE-ESTANDAR",
+    "esperado": "13.50",
+    "obtenido": "USD 13,50",
+    "estado": "APROBADO"
+  },
+  {
+    "caso": "UI-FRECUENTE-EXPRESS",
+    "esperado": "17.25",
+    "obtenido": "USD 17,25",
+    "estado": "APROBADO"
+  },
+  {
+    "caso": "UI-VIP-ESTANDAR",
+    "esperado": "12.00",
+    "obtenido": "USD 12,00",
+    "estado": "APROBADO"
+  },
+  {
+    "caso": "UI-VIP-EXPRESS",
+    "esperado": "15.75",
+    "obtenido": "USD 15,75",
+    "estado": "APROBADO"
+  },
+  {
+    "caso": "UI-PESO-'0'",
+    "estado": "APROBADO",
+    "esperado": "checkValidity falso"
+  },
+  {
+    "caso": "UI-PESO-'20.01'",
+    "estado": "APROBADO",
+    "esperado": "checkValidity falso"
+  },
+  {
+    "caso": "UI-PESO-'5.001'",
+    "estado": "APROBADO",
+    "esperado": "checkValidity falso"
+  },
+  {
+    "caso": "UI-PESO-''",
+    "estado": "APROBADO",
+    "esperado": "checkValidity falso"
+  },
+  {
+    "caso": "UI-TECLADO",
+    "estado": "APROBADO"
+  },
+  {
+    "caso": "UI-MOVIL-390",
+    "estado": "APROBADO"
+  },
+  {
+    "caso": "UI-RED",
+    "estado": "APROBADO"
+  },
+  {
+    "caso": "CAPTURA-HTML-COVERAGE",
+    "estado": "APROBADO"
+  }
+]

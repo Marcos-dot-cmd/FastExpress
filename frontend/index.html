@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0b1b2b">
+  <title>FastExpress · Cotizador</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a href="/" class="brand" aria-label="FastExpress, inicio">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h11v9H3z"/><path d="M14 10h4l3 3v3h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg>
+      </span>
+      Fast<span>Express</span>
+    </a>
+    <span class="badge">Calidad de Software</span>
+  </header>
+
+  <div class="hero" aria-hidden="true"></div>
+
+  <main>
+    <section class="intro">
+      <p class="eyebrow">Cotizador de envíos</p>
+      <h1>Calcula tu próximo envío <span class="accent">en segundos</span></h1>
+      <p>Conoce el valor de tu envío según el peso, tu tipo de cliente y la modalidad de entrega.</p>
+    </section>
+
+    <div class="grid">
+      <section class="card form-card">
+        <div class="card-head">
+          <span class="step" aria-hidden="true">1</span>
+          <div>
+            <h2>Datos del envío</h2>
+            <p class="muted">Todos los campos son obligatorios.</p>
+          </div>
+        </div>
+
+        <form id="quote-form">
+          <div class="field">
+            <label for="peso">Peso en kilogramos</label>
+            <div class="control">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8h12l2 12H4z"/><circle cx="12" cy="5" r="2"/></svg>
+              <input id="peso" name="peso" type="number" inputmode="decimal" min="0.01" max="20" step="0.01" placeholder="Ejemplo: 5.00" required aria-describedby="weight-help">
+              <span class="suffix" aria-hidden="true">kg</span>
+            </div>
+            <small id="weight-help">Desde 0,01 hasta 20,00 kg. Usa pasos de 0,01 kg.</small>
+          </div>
+
+          <div class="row">
+            <div class="field">
+              <label for="cliente">Tipo de cliente</label>
+              <div class="control">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
+                <select id="cliente" name="cliente">
+                  <option value="NUEVO">Nuevo · sin descuento</option>
+                  <option value="FRECUENTE">Frecuente · 10% de descuento</option>
+                  <option value="VIP">VIP · 20% de descuento</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="envio">Tipo de envío</label>
+              <div class="control">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg>
+                <select id="envio" name="envio">
+                  <option value="ESTANDAR">Estándar · sin recargo</option>
+                  <option value="EXPRESS">Express · recargo del 25%</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <button id="submit" type="submit"><span class="label">Calcular cotización</span> <span class="arrow" aria-hidden="true">→</span></button>
+          <p id="error" role="alert" hidden></p>
+        </form>
+      </section>
+
+      <section class="card result" aria-live="polite" aria-atomic="true">
+        <div class="card-head">
+          <span class="step" aria-hidden="true">2</span>
+          <div>
+            <p class="eyebrow">Resumen de cotización</p>
+            <h2 id="result-title">Tu cotización aparecerá aquí</h2>
+          </div>
+        </div>
+
+        <div id="empty" class="empty">
+          <div class="empty-art" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8 12 3 3 8v8l9 5 9-5z"/><path d="m3 8 9 5 9-5"/><path d="M12 13v8"/></svg>
+          </div>
+          <p class="muted">Completa los datos y pulsa calcular para ver el desglose.</p>
+        </div>
+
+        <div id="breakdown" hidden>
+          <dl>
+            <div><dt>Tarifa base</dt><dd id="base"></dd></div>
+            <div><dt>Costo por peso</dt><dd id="weight-cost"></dd></div>
+            <div class="subtotal"><dt>Subtotal</dt><dd id="subtotal"></dd></div>
+            <div class="minus"><dt>Descuento</dt><dd id="descuento"></dd></div>
+            <div class="plus"><dt>Recargo Express</dt><dd id="recargo"></dd></div>
+          </dl>
+          <div class="total">
+            <span>Total del envío</span>
+            <strong id="total"></strong>
+            <small>Valores en dólares estadounidenses</small>
+          </div>
+        </div>
+
+        <p class="note">La tarifa por kg se aplica al peso completo. El descuento y el recargo se calculan sobre el subtotal.</p>
+      </section>
+    </div>
+
+    <footer>
+      <ul class="rates" aria-label="Tarifas">
+        <li><span>Tarifa base</span><strong>USD 5,00</strong></li>
+        <li><span>Hasta 5 kg</span><strong>USD 2/kg</strong></li>
+        <li><span>Más de 5 kg</span><strong>USD 4/kg</strong></li>
+      </ul>
+    </footer>
+  </main>
+  <script src="/assets/app.js" defer></script>
+</body>
+</html>

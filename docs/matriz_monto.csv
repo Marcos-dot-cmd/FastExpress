@@ -1,0 +1,8 @@
+﻿ID,Peso kg,Cliente,Envio,Esperado USD,Obtenido,Estado,Prueba
+CN-M01,0.01,VIP,ESTANDAR,4.02,4.02,APROBADO,test_amount_and_rounding
+CN-M02,0.01,VIP,EXPRESS,5.27,5.27,APROBADO,test_amount_and_rounding
+CN-M03,0.01,FRECUENTE,EXPRESS,5.77,5.77,APROBADO,test_amount_and_rounding
+CN-M04,20,NUEVO,EXPRESS,106.25,106.25,APROBADO,test_amount_and_rounding
+CN-M05,5.01,VIP,EXPRESS,26.29,26.29,APROBADO,test_amount_and_rounding
+CN-M06,5.01,FRECUENTE,EXPRESS,28.80,28.80,APROBADO,test_amount_and_rounding
+CN-M07,0.01,NUEVO,EXPRESS,6.28,6.28,APROBADO,test_amount_and_rounding
